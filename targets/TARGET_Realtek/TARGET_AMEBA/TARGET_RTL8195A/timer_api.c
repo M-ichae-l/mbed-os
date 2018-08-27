@@ -76,8 +76,11 @@ void gtimer_init (gtimer_t *obj, uint32_t tid)
     pTimerAdapter->TimerIrqPriority = 0;
     pTimerAdapter->TimerLoadValueUs = 0xFFFFFFFF;   // Just a whatever value
     pTimerAdapter->TimerMode = USER_DEFINED;
-    
+
     HalTimerInit ((VOID*) pTimerAdapter);
+
+// zzw 
+    HalTimerOp.HalTimerEn((u32)(pTimerAdapter->TimerId));
 }
 
 void gtimer_deinit (gtimer_t *obj)
