@@ -3,7 +3,6 @@
 
 #define USE_CLIB_PATCH		0
 
-
 #if defined (__GNUC__)
 	/* build rom should set USE_RTL_ROM_CLIB=0 */
 	#if !defined(CONFIG_MBED_ENABLED)
@@ -163,6 +162,5 @@
 	#define malloc                  pvPortMalloc
 	#define free                    vPortFree
 #endif
-
 
 #endif // PLATFORM_STDLIB_RTL8195A_H

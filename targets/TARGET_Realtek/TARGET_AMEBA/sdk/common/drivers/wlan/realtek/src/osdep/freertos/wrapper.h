@@ -18,7 +18,6 @@
 #ifndef __WRAPPER_H__
 #define __WRAPPER_H__
 
-
 //----- ------------------------------------------------------------------
 // Include Files
 //----- ------------------------------------------------------------------
@@ -26,7 +25,6 @@
 #include <string.h>
 #include "wireless.h"
 #include <skbuff.h>
-
 #include "osdep_service.h"
 
 #ifndef __LIST_H
@@ -48,7 +46,6 @@
 // };
 
 #define LIST_HEAD_INIT(name) { &(name), &(name) }
-
 #define INIT_LIST_HEAD(ptr) do { \
 	(ptr)->next = (ptr); (ptr)->prev = (ptr); \
 } while (0)
@@ -300,7 +297,6 @@ static __inline__ void skb_queue_head_init(struct sk_buff_head *list)
 static __inline__ void __skb_queue_tail(struct sk_buff_head *list, struct sk_buff *newsk)
 {
         struct sk_buff *prev, *next;
-
         newsk->list = list;
         list->qlen++;
         next = (struct sk_buff *)list;
@@ -331,7 +327,7 @@ static __inline__ void skb_queue_tail(struct sk_buff_head *list, struct sk_buff 
 }
 
 static __inline__ void skb_assign_buf(struct sk_buff *skb, unsigned char *buf, unsigned int len)
-{	
+{
 	skb->head = buf;
 	skb->data = buf;
 	skb->tail = buf;
@@ -449,6 +445,4 @@ u8		rtw_cancel_timer(_timer *ptimer);
 void	rtw_del_timer(_timer *ptimer);
 
 #endif //__WRAPPER_H__
-
-
 

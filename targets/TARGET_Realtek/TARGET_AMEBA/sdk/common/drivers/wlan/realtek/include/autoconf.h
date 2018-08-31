@@ -14,7 +14,6 @@
  * limitations under the License.
  ******************************************************************************/
 
-
 #ifndef WLANCONFIG_H
 #define WLANCONFIG_H
 
@@ -46,7 +45,6 @@
 	#define CONFIG_GSPI_HCI
 #endif
 #endif // #if (CONFIG_PLATFORM_AMEBA_X == 1)
-
 
 #if defined(CONFIG_HARDWARE_8188F) || defined(CONFIG_HARDWARE_8192E)|| defined(CONFIG_HARDWARE_8723D) || defined(CONFIG_HARDWARE_8821C) || defined(CONFIG_PLATFORM_8195BHP) || defined(CONFIG_HARDWARE_8188E) || defined(CONFIG_PLATFORM_8721D)
 #define CONFIG_FW_C2H_PKT
@@ -237,7 +235,6 @@
 #else
   #define NET_IF_NUM ((CONFIG_ETHERNET) + (CONFIG_WLAN))
 #endif
-
 
 /****************** For EAP auth configurations *******************/
 #define CONFIG_TLS	0
@@ -702,3 +699,4 @@ extern unsigned int g_ap_sta_num;
 #define WLAN_WAPPER_VERSION 1
 
 #endif //WLANCONFIG_H
+

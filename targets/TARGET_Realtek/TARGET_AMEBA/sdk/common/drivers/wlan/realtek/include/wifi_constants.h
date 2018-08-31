@@ -52,7 +52,6 @@ extern "C" {
 
 #define RTW_MAX_PSK_LEN		(64)
 #define RTW_MIN_PSK_LEN		(8)
-
 #define MCSSET_LEN			16
 
 /**
@@ -73,7 +72,6 @@ enum
     RTW_BUFFER_UNAVAILABLE_PERMANENT = 10,   /**< Buffer unavailable permanently */
     RTW_WPS_PBC_OVERLAP              = 11,   /**< WPS PBC overlap */
     RTW_CONNECTION_LOST              = 12,   /**< Connection lost */
-
     RTW_ERROR                        = -1,   /**< Generic Error */
     RTW_BADARG                       = -2,   /**< Bad Argument */
     RTW_BADOPTION                    = -3,   /**< Bad option */
@@ -135,12 +133,9 @@ enum {
     RTW_SECURITY_WPA2_TKIP_PSK  = ( WPA2_SECURITY | TKIP_ENABLED ),                 /**< WPA2 Security with TKIP                 */
     RTW_SECURITY_WPA2_MIXED_PSK = ( WPA2_SECURITY | AES_ENABLED | TKIP_ENABLED ),   /**< WPA2 Security with AES & TKIP           */
     RTW_SECURITY_WPA_WPA2_MIXED = ( WPA_SECURITY  | WPA2_SECURITY ),                /**< WPA/WPA2 Security                       */
-
     RTW_SECURITY_WPS_OPEN       = WPS_ENABLED,                                      /**< WPS with open security                  */
     RTW_SECURITY_WPS_SECURE     = (WPS_ENABLED | AES_ENABLED),                      /**< WPS with AES security                   */
-
     RTW_SECURITY_UNKNOWN        = -1,                                               /**< May be returned by scan function if security is unknown. Do not pass this to the join function! */
-
     RTW_SECURITY_FORCE_32_BIT   = 0x7fffffff                                        /**< Exists only to force rtw_security_t type to 32 bits */
 };
 typedef unsigned long rtw_security_t;
@@ -371,9 +366,7 @@ enum {
 	RTW_COUNTRY_YT,
 	RTW_COUNTRY_ZA,
 	RTW_COUNTRY_ZW,
-	
 	RTW_COUNTRY_MAX
-
 };
 typedef unsigned long rtw_country_code_t;
 

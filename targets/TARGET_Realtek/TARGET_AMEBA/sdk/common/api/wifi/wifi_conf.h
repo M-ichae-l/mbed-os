@@ -766,7 +766,6 @@ int wifi_get_autoreconnect(__u8 *mode);
   */
 int wifi_get_last_error(void);
 
-
 #ifdef CONFIG_CUSTOM_IE
 #ifndef BIT
 #define BIT(x)	((__u32)1 << (x))
@@ -887,7 +886,6 @@ int wifi_get_antenna_info(unsigned char *antenna);
 #endif // #ifdef CONFIG_ANTENNA_DIVERSITY
 
 void wifi_set_indicate_mgnt(int enable);
-
 
 /**
  * @brief  Get the information of MP driver

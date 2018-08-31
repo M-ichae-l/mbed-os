@@ -46,14 +46,11 @@ extern "C" {
 	#error "Undefined Platform stdlib"
 #endif
 
-
 #if (CONFIG_PLATFORM_AMEBA_X == 0)
 #include "basic_types.h"
 #endif
-
 
 #ifdef __cplusplus
 }
 #endif
 #endif //__PLATFORM_STDLIB_H__
-
